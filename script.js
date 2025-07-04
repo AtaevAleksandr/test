@@ -287,8 +287,28 @@ if (tournamentForm) {
         const level = formData.get('level');
         const message = formData.get('message');
         
-        // Простая валидация
-        if (!name || !phone || !level) {
+        // Альтернативный способ получения данных
+        const nameElement = document.getElementById('tournamentName');
+        const phoneElement = document.getElementById('tournamentPhone');
+        const levelElement = document.getElementById('tournamentLevel');
+        const messageElement = document.getElementById('tournamentMessage');
+        
+        const nameValue = nameElement ? nameElement.value.trim() : '';
+        const phoneValue = phoneElement ? phoneElement.value.trim() : '';
+        const levelValue = levelElement ? levelElement.value : '';
+        const messageValue = messageElement ? messageElement.value.trim() : '';
+        
+        // Отладочный вывод
+        console.log('Данные формы (FormData):', { name, phone, level, message });
+        console.log('Данные формы (Element):', { nameValue, phoneValue, levelValue, messageValue });
+        
+        // Простая валидация с использованием альтернативного способа
+        if (!nameValue || !phoneValue || !levelValue) {
+            console.log('Не прошли валидацию:', { 
+                nameValue: !nameValue ? 'пустое' : 'заполнено', 
+                phoneValue: !phoneValue ? 'пустое' : 'заполнено', 
+                levelValue: !levelValue ? 'пустое' : 'заполнено' 
+            });
             showNotification('Пожалуйста, заполните все обязательные поля', 'error');
             return;
         }
@@ -303,10 +323,10 @@ if (tournamentForm) {
         
         const text = `🏆 Заявка на участие в турнире!
         
-👤 Имя: ${name}
-📞 Телефон: ${phone}
-🏓 Уровень игры: ${levelNames[level] || level}
-${message ? `💬 Дополнительная информация: ${message}` : ''}`;
+👤 Имя: ${nameValue}
+📞 Телефон: ${phoneValue}
+🏓 Уровень игры: ${levelNames[levelValue] || levelValue}
+${messageValue ? `💬 Дополнительная информация: ${messageValue}` : ''}`;
         
         // Создание ссылки для WhatsApp
         const whatsappUrl = `https://wa.me/79218988574?text=${encodeURIComponent(text)}`;
