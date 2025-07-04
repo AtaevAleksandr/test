@@ -285,12 +285,10 @@ if (tournamentForm) {
         const name = formData.get('name');
         const phone = formData.get('phone');
         const level = formData.get('level');
-        const type = formData.get('type');
-        const date = formData.get('date');
         const message = formData.get('message');
         
         // Простая валидация
-        if (!name || !phone || !level || !type) {
+        if (!name || !phone || !level) {
             showNotification('Пожалуйста, заполните все обязательные поля', 'error');
             return;
         }
@@ -303,20 +301,11 @@ if (tournamentForm) {
             'professional': 'Профессиональный'
         };
         
-        const typeNames = {
-            'local': 'Локальный турнир',
-            'regional': 'Региональный турнир',
-            'masters': 'Турнир Мастерс',
-            'championship': 'Чемпионат'
-        };
-        
         const text = `🏆 Заявка на участие в турнире!
         
 👤 Имя: ${name}
 📞 Телефон: ${phone}
 🏓 Уровень игры: ${levelNames[level] || level}
-🎯 Тип турнира: ${typeNames[type] || type}
-${date ? `📅 Предпочтительная дата: ${date}` : ''}
 ${message ? `💬 Дополнительная информация: ${message}` : ''}`;
         
         // Создание ссылки для WhatsApp
