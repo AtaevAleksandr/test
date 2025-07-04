@@ -1,0 +1,31 @@
+{
+  "name": "Клуб настольного тенниса Воейково",
+  "short_name": "КНТ Воейково",
+  "description": "Официальный сайт клуба настольного тенниса АНО КНТ Воейково",
+  "lang": "ru",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "logo/logo.JPG",
+      "sizes": "any",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo/logo.JPG",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo/logo.JPG",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+} 

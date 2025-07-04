@@ -5,6 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no, email=no, address=no">
     <title>Клуб настольного тенниса "Воейково" - Официальный сайт</title>
+    
+    <!-- Фавиконы для всех платформ -->
+    <link rel="icon" type="image/jpeg" href="logo/logo.JPG" sizes="any">
+    <link rel="icon" type="image/jpeg" href="logo/logo.JPG" sizes="16x16">
+    <link rel="icon" type="image/jpeg" href="logo/logo.JPG" sizes="32x32">
+    <link rel="icon" type="image/jpeg" href="logo/logo.JPG" sizes="48x48">
+    <link rel="icon" type="image/jpeg" href="logo/logo.JPG" sizes="64x64">
+    
+    <!-- Apple Touch Icon для iOS/Mac -->
+    <link rel="apple-touch-icon" href="logo/logo.JPG" sizes="180x180">
+    <link rel="apple-touch-icon" href="logo/logo.JPG" sizes="152x152">
+    <link rel="apple-touch-icon" href="logo/logo.JPG" sizes="144x144">
+    <link rel="apple-touch-icon" href="logo/logo.JPG" sizes="120x120">
+    <link rel="apple-touch-icon" href="logo/logo.JPG" sizes="76x76">
+    <link rel="apple-touch-icon" href="logo/logo.JPG" sizes="72x72">
+    <link rel="apple-touch-icon" href="logo/logo.JPG" sizes="60x60">
+    <link rel="apple-touch-icon" href="logo/logo.JPG" sizes="57x57">
+    
+    <!-- Android иконки -->
+    <link rel="icon" type="image/jpeg" href="logo/logo.JPG" sizes="192x192">
+    <link rel="icon" type="image/jpeg" href="logo/logo.JPG" sizes="512x512">
+    
+    <!-- Windows Metro -->
+    <meta name="msapplication-TileImage" content="logo/logo.JPG">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    
+    <!-- Общие мета-теги -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="КНТ Воейково">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -88,7 +124,7 @@
                 <div class="info-cards">
                     <div class="info-card">
                         <i class="fas fa-gift"></i>
-                        <h3>Бесплатно для детей</h3>
+                        <h3>Бесплатно для детей и ветеранов</h3>
                         <p>Первая тренировка бесплатно</p>
                     </div>
                     <div class="info-card">
@@ -149,13 +185,21 @@
                 <p class="section-subtitle">Что мы предлагаем нашим игрокам</p>
             </div>
             <div class="services-grid">
-                <div class="service-card individual-training">
+                <div class="service-card kids-training">
                     <div class="service-icon">
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-child"></i>
                     </div>
-                    <h3>Индивидуальные тренировки</h3>
-                    <p>Персональные занятия с полным вниманием к технике и развитию навыков каждого игрока</p>
-                    <div class="service-price">1000 руб/час</div>
+                    <h3>Детские секции</h3>
+                    <p>Специальные программы для детей от 6 лет с игровыми элементами и развитием координации</p>
+                    <div class="service-price">Бесплатно</div>
+                </div>
+                <div class="service-card veteran-training">
+                    <div class="service-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Тренировки для ветеранов</h3>
+                    <p>Специальные программы для ветеранов с учетом возрастных особенностей и физической подготовки</p>
+                    <div class="service-price">Бесплатно</div>
                 </div>
                 <div class="service-card group-training">
                     <div class="service-icon">
@@ -165,13 +209,13 @@
                     <p>От 10 человек. 4 тренировки в месяц (по 2 часа) — 2800 руб. 8 тренировок в месяц — 4900 руб.</p>
                     <div class="service-price">от 2800 руб/мес</div>
                 </div>
-                <div class="service-card kids-training">
+                <div class="service-card individual-training">
                     <div class="service-icon">
-                        <i class="fas fa-child"></i>
+                        <i class="fas fa-user"></i>
                     </div>
-                    <h3>Детские секции</h3>
-                    <p>Специальные программы для детей от 6 лет с игровыми элементами и развитием координации</p>
-                    <div class="service-price">Бесплатно</div>
+                    <h3>Индивидуальные тренировки</h3>
+                    <p>Персональные занятия с полным вниманием к технике и развитию навыков каждого игрока</p>
+                    <div class="service-price">1000 руб/час</div>
                 </div>
                 <div class="service-card competition-training">
                     <div class="service-icon">
@@ -270,6 +314,7 @@
                                 <option value="individual">Индивидуальная</option>
                                 <option value="group">Групповая</option>
                                 <option value="kids">Детская секция</option>
+                                <option value="veterans">Тренировки для ветеранов</option>
                                 <option value="competition">Подготовка к соревнованиям</option>
                             </select>
                         </div>
